@@ -1,0 +1,16 @@
+.message-display {
+  overflow: scroll;
+  width: 300px;
+  height: 200px;
+  background: hotpink;
+  padding:15px;
+}
+
+#container {
+  margin: 0 auto 0 auto;
+  width: 400px;
+}
+
+textarea {
+  width:300px;
+}
