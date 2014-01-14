@@ -8,7 +8,8 @@ $(function() {
 
   $form.on("submit", function(event) {
     event.preventDefault();
-    var message = $form.find('textarea').val();
+    var message = $form.find('.text').val();
+    $form.find(".text").val("");
     socket.emit("submit-message", message);
   });
 
