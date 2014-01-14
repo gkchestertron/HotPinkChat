@@ -2,7 +2,10 @@
   overflow: scroll;
   width: 300px;
   height: 200px;
-  background: hotpink;
+  background: -webkit-linear-gradient(left top, red , blue); /* For Safari */
+  background: -o-linear-gradient(bottom right, red, blue); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, red, blue); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, red , blue); /* Standard syntax (must be last) */
   padding:15px;
 }
 
@@ -13,4 +16,25 @@
 
 textarea {
   width:300px;
+}
+
+@keyframes myfirst
+{
+  0%   {background: pink;}
+  50%  {background: hotpink;}
+  100% {background: pink;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+  0%   {background: pink;}
+  50%  {background: hotpink;}
+  100% {background: pink;}
+}
+
+body {
+  animation: myfirst 10s;
+  -webkit-animation: myfirst 10s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
 }
