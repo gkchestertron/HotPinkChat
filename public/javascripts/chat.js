@@ -4,6 +4,7 @@ $(function() {
   var $feed = $(".message-display");
   var $nickname = $('#nickname');
   var $nicknameForm = $('.nickname-change')
+  var $joinRoomForm = $('.select-room')
 
   $form.on("submit", function(event) {
     event.preventDefault();
@@ -31,4 +32,8 @@ $(function() {
     socket.emit("nicknameChangeRequest", nickname);
   });
 
+  $joinRoomForm.on("submit", function (event) {
+    event.preventDefault();
+    socket.emit("selectRoom", $("#room-input").val());
+  });
 });
