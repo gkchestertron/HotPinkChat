@@ -17,9 +17,9 @@ $(function() {
     $p = $("<p>");
     $p.text(data);
     $feed.append($p);
-    var objDiv = document.getElementsByTagName("p");
-    objDiv[0].scrollTop = objDiv[0].scrollHeight;
-  });
+    var objDiv = document.getElementById("chat");
+    objDiv.scrollTop = objDiv.scrollHeight;
+    });
 
   socket.on("nicknameChangeResult", function (data) {
     if (data.message) {
