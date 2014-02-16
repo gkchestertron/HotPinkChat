@@ -9,4 +9,4 @@ var server = http.createServer(router);
 var chatServer = require('./lib/chat_server.js');
 chatServer.createChat(server);
 
-server.listen(8080);
+server.listen();
