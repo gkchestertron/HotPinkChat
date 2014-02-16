@@ -17,7 +17,7 @@ $(function() {
     $p = $("<p>");
     $p.text(data);
     $feed.append($p);
-    var objDiv = document.getElementByTagName("p");
+    var objDiv = document.getElementsByTagName("p");
     objDiv.scrollTop = objDiv.scrollHeight;
   });
 
