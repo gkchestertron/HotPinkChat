@@ -18,7 +18,7 @@ $(function() {
     $p.text(data);
     $feed.append($p);
     var objDiv = document.getElementsByTagName("p");
-    objDiv.scrollTop = objDiv.scrollHeight;
+    objDiv[0].scrollTop = objDiv[0].scrollHeight;
   });
 
   socket.on("nicknameChangeResult", function (data) {
